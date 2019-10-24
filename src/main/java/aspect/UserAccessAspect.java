@@ -16,8 +16,8 @@ public class UserAccessAspect {
     //What kind of method calls I would intercept
     //execution(* PACKAGE.*.*(..))
     //Weaving & Weaver
-    @Before("execution(* model.*.*(..))")
-    public void before(JoinPoint joinPoint) {
+    @Before("execution(* model.UserRepository.*(..))")
+    public void validateUser(JoinPoint joinPoint) {
 
         //advice
         logger.info(" Check for user access ");
